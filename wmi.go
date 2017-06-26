@@ -392,11 +392,11 @@ func (c *Client) loadEntity(dst interface{}, src *ole.IDispatch) (errFieldMismat
 				}
 				break
 			}
-			return &ErrFieldMismatch{
-				StructType: of.Type(),
-				FieldName:  n,
-				Reason:     fmt.Sprintf("unsupported type (%T)", val),
-			}
+			// return &ErrFieldMismatch{
+			// 	StructType: of.Type(),
+			// 	FieldName:  n,
+			// 	Reason:     fmt.Sprintf("unsupported type (%T)", val),
+			// }
 		}
 	}
 	return errFieldMismatch
